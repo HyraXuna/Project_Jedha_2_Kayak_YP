@@ -22,7 +22,7 @@ for i in range(len(cities_list)):
             start_urls = [line['hotel_url'] for line in urls]
 
         def parse(self, response):
-                time.sleep(0.5)
+                time.sleep(0.3)
                 yield {
                     "hotel_name" : response.css("h2[class='d2fee87262 pp-header__title']::text").get(),
                     "url_hotel" : response.url,
@@ -43,8 +43,11 @@ for i in range(len(cities_list)):
     process = CrawlerProcess(settings = {
         'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3',
         'LOG_LEVEL': logging.INFO,
+          'DEFAULT_REQUEST_HEADERS': {
+        'Accept-Language': 'fr-FR,fr;q=0.9'
+        },
         "FEEDS": {
-            'Scraping/hotels_infos_per_city/'+filename : {"format": "json"},
+            'Scraping/hotels_infos_per_city/'+filename : {"format": "json", "encoding": "utf-8",},
         },
         'DOWNLOAD_FAIL_ON_DATALOSS' : True,
         'RETRY_ENABLED' : True
