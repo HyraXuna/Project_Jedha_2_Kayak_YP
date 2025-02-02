@@ -3,8 +3,6 @@ import logging
 import scrapy
 from scrapy.crawler import CrawlerProcess
 from scrapy import Selector
-import time
-import random
 
 cities_list = ["Mont+Saint+Michel", "Saint+Malo", "Bayeux", "Le+Havre", "Rouen", "Paris", "Amiens", "Lille", "Strasbourg", "Chateau+du+Haut+Koenigsbourg", "Colmar",
 "Eguisheim", "Besancon", "Dijon", "Annecy", "Grenoble", "Lyon", "Gorges+du+Verdon", "Bormes+les+Mimosas", "Cassis", "Marseille", "Aix+en+Provence",
@@ -30,7 +28,7 @@ for i in range(len(cities_list)):
 
 
 
-    filename = "hotel_links_{}".format(cities_list[i])
+    filename = "hotel_links_{}.json".format(cities_list[i])
 
     if filename in os.listdir('Scraping/hotels_links/'):
                 os.remove('Scraping/hotels_links/'+filename)
