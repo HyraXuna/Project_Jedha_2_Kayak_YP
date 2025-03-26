@@ -7,7 +7,7 @@ This is the data management project. The goal is to use scraping to get hotels' 
 ["Mont Saint Michel","St Malo","Bayeux","Le Havre","Rouen","Paris","Amiens","Lille","Strasbourg","Chateau du Haut Koenigsbourg","Colmar","Eguisheim","Besancon","Dijon","Annecy","Grenoble","Lyon","Gorges du Verdon",
 "Bormes les Mimosas","Cassis","Marseille","Aix en Provence","Avignon","Uzes","Nimes","Aigues Mortes","Saintes Maries de la mer","Collioure","Carcassonne","Ariege","Toulouse","Montauban","Biarritz","Bayonne","La Rochelle"]
 ```
-After that we needed to display a map of top 5 cities and top 20 hotels in function of the previous data informations. Moreover we used `SQLAlchemy&` and AWS RDS to put these data in a database that has been structured.
+After that we needed to display a map of top 5 cities and top 20 hotels in function of the previous data informations. Moreover we used `SQLAlchemy` and AWS RDS to put these data in a database that has been structured.
 
 ## Getting Started
 
@@ -17,7 +17,6 @@ All the work and tests are in this [Notebook](Project_kayak_YP.ipynb).
 * Part 3 - Work on the dataset and put it on S3
 * Part 4 - ETL, create a database and put the cleaned and reworked data on it
 
-All of that with confusion matrix & f1-score evaluation 📈.
 
 ### Prerequisites
 
@@ -42,7 +41,7 @@ Here some example of results:
 
 * *Maps*:
 
-![map_cities](map_top5_cities_humidity.png)
+![map_cities](map_top5_cities_temperature.png)
 
 ![map_hotels](map_top20_hotels_from_top5_cities.png)
 
